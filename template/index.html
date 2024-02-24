@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Qui, nemo ratione, dolorem,
+    <br>
+    {{people}}
+    
+    {%for peopl in people%}
+    <div>
+        <span>{{forloop.counter}}</span>
+        <span>{{peopl.name}}</span>
+        <span> {{peopl.age}}</span>
+        <span>{{peopl.text|truncatechars:7}}</span>
+    </div>
+     
+    <!--
+    {% if peopl.age > 10 %}
+    <span style="background-color: blue;">{{peopl.name}} now you can go</span>
+    {%endif%}  
+    -->      
+    {%endfor%}
+    {% if  "bauwa" in name %}
+    I love you bauwa
+    {%endif%} 
+</body>
+</html>
